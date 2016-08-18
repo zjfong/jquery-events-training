@@ -4,4 +4,16 @@ $(document).ready(function(){
 
   $("#time").text( Date.now() );
 
+
+$("input.add").on("change", function addition(event){
+  var left = $('input#left').val();
+  var right = $('input#right').val();
+  var leftVal = parseInt(left) || 0;
+  var rightVal = parseInt(right) || 0;
+  var total = leftVal + rightVal;
+  $("#total").val(total);
+  //console.log(left);
+});
+
+  // console.log(left)
 })
